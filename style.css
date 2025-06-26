@@ -1,0 +1,271 @@
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir'
+}
+
+/*--Page1--*/
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+
+/* underline on nav links */
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #DADBDD;
+    margin: 0.25rem auto 0;
+    transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    width: 100%;
+}
+
+.header {
+    background-image: linear-gradient(rgba(2, 6, 25, 0.2), rgba(2, 6, 25, 0.2)), url(Images/1.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.navbar-nav .dropdown-toggle::after {
+    border: none !important;
+    content: "" !important;
+}
+
+.nav-item .something {
+        backdrop-filter:blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border:0.5px solid rgba(200, 200, 200, 0.2) ;
+        border-radius:20px;
+}
+.dropdown-header{
+    font-size: 16px !important;
+}
+
+.dropdown-item{
+    font-weight: 1500 !important;
+}
+.nav-item .nav-link {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin:1.5rem;
+    position: relative;
+    top: 10px;
+}
+
+/* .sn:hover {
+    color: white;
+    border-color: white;
+    background-color: white !important;
+    box-shadow: 0 0 10px white, 0 0 15px white;
+
+} */
+
+.main {
+    min-height: 100vh;                /* fill the viewport height */
+    display: flex;                    /* flex container so we can push text right */
+    align-items: center;              /* vertical centering */
+    justify-content: flex-end;        /* keep content anchored to the right side */
+    padding: 0 5vw;                   /* breathing room left & right */
+    position: relative;               /* context for absolutely‑positioned children (if any) */
+}
+
+.intro {
+    text-align: left;
+    max-width: 680px;
+    margin: 0;
+    color: rgba(200, 200, 200,0.7);
+    letter-spacing: 0.1px;
+    font-size: 14.8px !important;
+    animation: h1-custom 2s ease forwards;
+}
+
+/* utility */
+.intro {
+    max-width: 680px;
+    text-align: justify !important;
+}
+
+@media (max-width: 1000px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .pg-2 {
+        height: fit-content;
+    }
+
+    .pg-2 .row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .trp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -36%);
+    }
+}
+
+@media (max-width: 1398px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .pg-2, .pg-3, .pg-4, .pg-5, .header{
+        overflow-y: hidden;
+    }
+    .pg-3 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-3 .txt p1 {
+        font-size: 12px;
+    }
+
+    .pg-4 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-4 .txt h4 {
+        font-size: 14px;
+    }
+
+    .pg-4 .txt p1 {
+        font-size: 12px;
+    }
+    .pg-5 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-5 .txt p1 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .trp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pg-3 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-3 .txt p1 {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.01) !important;
+        backdrop-filter: blur(20px);
+
+    }
+
+
+
+
+    .sn {
+        margin: auto;
+    }
+
+    .row {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: -10px !important;
+    }
+
+    .pg-3 .row {
+        position: relative;
+        top: 300px;
+    }
+    .abo, .ser, .mem, .con{
+        position: relative;
+        right: 30px;
+    }
+
+    /* Center hero text on tablets & phones */
+    .main {
+        justify-content: center;
+    }
+}
+
+@media (max-width:575px) {
+
+    body{
+        background-color: black !important;
+
+    }
+    .header{
+    background-image: linear-gradient(rgba(2, 6, 25, 0.2), rgba(2, 6, 25, 0.2)), url(Images/1.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position-y:10%;
+    background-position-x:10%;
+    background-size:150vh;
+    background-repeat: no-repeat;
+    overflow: visible;
+    }
+
+    .intro {
+      position: relative;
+      top: 50rem;
+    }
+    .nav-item{
+        position: relative;
+        bottom: 10rem;
+    }
+
+}
